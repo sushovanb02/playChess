@@ -23,7 +23,7 @@ function handler(req, resp){
 	else if(r_url.pathname === "/")
 	{
 		resp.writeHead(200, {"Content-Type" : "text/html"});
-		var clientui = fs.readFileSync("chess.html");
+		var clientui = fs.readFileSync("index.html");
 		resp.write(clientui);
 		resp.end();
 	}
