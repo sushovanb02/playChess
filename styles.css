@@ -50,9 +50,9 @@ html[xmlns] .clearfix {
 	display: block;
 }
 .chessboard{
-	width: 600px;
-	height: 600px;
-	border: 2px #bbc8f0 solid;
+	width: 450px;
+	height: 450px;
+	border: 2px #000000 solid;
 	float: left;
 }
 .chessboard div{
@@ -69,7 +69,7 @@ html[xmlns] .clearfix {
 	position: absolute;
 }
 .chessboard div.B{
-	background-color: #bbc8f0;
+	background-color: #2b4679a9;
 }
 .chessboard div.W{
 	background-color: #FFF;
@@ -164,6 +164,7 @@ font-size: 12px;
 height: 27px;
 padding: 0px 3%;
 -webkit-transition: background .2s linear;
+transition: background-color .2s linear;
 outline: none;
 
 }
@@ -246,4 +247,5 @@ color: #54686b;
 margin-right: 5px;
 }
 footer{
+	text-align: center;
 }

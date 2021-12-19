@@ -1,5 +1,5 @@
 let app = require('http').createServer(handler);
-let io = require('socket.io');
+let io = require('socket.io')(app);
 let ws = require("websocketserver");
 let fs = require("fs");
 let url = require("url");
@@ -14,7 +14,7 @@ app.listen(port);
 console.log("HTTP server listening on port " + port);
 
 function handler(req, resp){
-	let r_url = new URL("req.url").toString();
+	var r_url = url.parse(req.url);
 	if(r_url.pathname.substring(1) === "getport"){
 		resp.writeHead(200, {"Content-Type" : "text/plain"});
 		resp.write("" + port);
@@ -252,7 +252,7 @@ Game.prototype = {
 
 
 //may need to add some securing to prevent thread accidents in the following method later
-io.sockets.on('connection', function (sk) {
+	io.on('connection', function (sk) {
 	var w = null,
 	b = null,
 	skColor = false;

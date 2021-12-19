@@ -89,7 +89,7 @@ CHESSAPP.ui = (function(){
 			header = document.createElement("h2");
 
 		moveList = document.createElement("table");
-		header.appendChild(document.createTextNode("moves"));
+		header.appendChild(document.createTextNode("Moves"));
 		moveListContainer.className = "movelist";
 		moveListScroll.className = "scroll";
 		moveListScroll.appendChild(moveList);
