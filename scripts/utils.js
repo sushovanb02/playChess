@@ -195,7 +195,7 @@ if (!window.JSON) {
 				var sOutput = "";
 				if (vContent.constructor === Array) {
 					for (var nId = 0; nId < vContent.length; sOutput += this.stringify(vContent[nId]) + ",", nId++);
-					return "[" + sOutput.substr(0, sOutput.length - 1) + "]";
+					return "[" + sOutput.prototype.substr(0, sOutput.length - 1) + "]";
 				}
 				if (vContent.toString !== Object.prototype.toString) { return "\"" + vContent.toString().replace(/"/g, "\\$&") + "\""; }
 				for (var sProp in vContent) { sOutput += "\"" + sProp.replace(/"/g, "\\$&") + "\":" + this.stringify(vContent[sProp]) + ","; }
